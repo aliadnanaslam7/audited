@@ -34,6 +34,7 @@ module Audited
   end
 
   class Audit < ::ActiveRecord::Base
+    self.table_name = 'gem_audits'
     belongs_to :auditable,  polymorphic: true
     belongs_to :user,       polymorphic: true
     belongs_to :associated, polymorphic: true

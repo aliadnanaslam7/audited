@@ -1,10 +1,10 @@
 class <%= migration_class_name %> < <%= migration_parent %>
   def self.up
-    add_column :audits, :request_uuid, :string
-    add_index :audits, :request_uuid
+    add_column :gem_audits, :request_uuid, :string
+    add_index :gem_audits, :request_uuid
   end
 
   def self.down
-    remove_column :audits, :request_uuid
+    remove_column :gem_audits, :request_uuid
   end
 end

@@ -12,9 +12,9 @@ class <%= migration_class_name %> < <%= migration_parent %>
   private
 
   def fix_index_order_for(columns, index_name)
-    if index_exists? :audits, columns, name: index_name
-      remove_index :audits, name: index_name
-      add_index :audits, columns.reverse, name: index_name
+    if index_exists? :gem_audits, columns, name: index_name
+      remove_index :gem_audits, name: index_name
+      add_index :gem_audits, columns.reverse, name: index_name
     end
   end
 end
